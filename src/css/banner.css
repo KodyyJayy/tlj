@@ -1,0 +1,32 @@
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 1.25rem;
+    background-color: #0072B4;
+    color: #fff;
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
+    padding-top: 10px;
+    padding-bottom: 10px
+}
+
+.content {
+    width: 80%;
+    margin: 0;
+    text-align: center;
+}
+
+.content a {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+@media (max-width: 479px) {
+    .content {
+      line-height: 1.1;
+      font-size: 1rem;  
+    }
+}

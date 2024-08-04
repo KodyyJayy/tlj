@@ -1,0 +1,142 @@
+.about-me {
+    width: 100%;
+    background-size: cover;
+    background-repeat: repeat;
+    display: block;
+    box-sizing: inherit;
+}
+
+.about-me-inner {
+    gap: 0.5em !important;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    padding-right: 2em;
+    padding-left: 2em;
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    box-sizing: inherit;
+}
+
+.about-me-inner > h1:nth-child(1) {
+    font-family: Poppins, sans-serif;
+    font-weight: 800;
+    font-size: 3rem;
+    line-height: 1;
+    text-align: center;
+    width: 100%;
+    object-fit: contain;
+    height: auto;
+    color: #000;
+    white-space: break-spaces;
+    margin: 0;
+    unicode-bidi: isolate;
+}
+
+.about-me-inner > h1:nth-child(2) {
+    color: #f9ca0d;
+    margin-top: -0.5em;
+    text-align: center;
+    width: 100%;
+    object-fit: contain;
+    height: auto;
+    font-family: Poppins, sans-serif;
+    font-weight: 800;
+    font-size: 1.2em;
+    line-height: 1.2;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+.about-me-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    width: 100%;
+}
+
+.about-me-content img {
+    width: 45%;
+    max-width: 100%;
+    border-style: none;
+    transition: transform 0.2s ease-in-out;
+}
+
+.about-me-content img:hover {
+    cursor: pointer;
+    transform: scale(1.05) rotate(-1deg);
+}
+
+.about-me-content h1 {
+    color: #000;
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.2px;
+    font-size: 1.2rem;
+    flex: 1;
+}
+
+@media (max-width: 479px) {
+    .about-me-inner {
+        display: flex;
+    }
+
+    .about-me-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-me-content img {
+        width: 100%;
+    }
+
+    .about-me-content h1 {
+        text-align: center;
+        width: 100%;
+        line-height: 1.35;
+        font-size: 1.1em;
+    }
+
+    .icon {
+        display: none;
+    }
+}
+
+.icon  {
+    position: absolute;
+    opacity: 0.15;
+    transition-duration: .5s;
+    transition: all 0.3s;
+
+}
+
+.arrow {
+    transform: rotate(-45deg);
+    right: 5%;
+    margin-top: 5%;
+    width: 150px;
+}
+
+.arrow:hover {
+    transform: rotate(-45deg) scale(1.2);
+    transition-timing-function: cubic-bezier(0.47,2.02,.31,-.36);
+}
+
+.spiral {
+    transform: scale(1) rotate(-90deg);
+    left: 10%;
+    margin-top: 15%;
+}
+
+.spiral:hover {
+    transform: rotate(-90deg) scale(1.2);
+    transition-timing-function: cubic-bezier(0.47,2.02,.31,-.36);
+}

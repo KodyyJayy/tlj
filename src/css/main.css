@@ -1,0 +1,15 @@
+* {
+    box-sizing: inherit;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+@media (max-width: 896px) {
+    body {
+        margin-top: 60px;
+    }
+}

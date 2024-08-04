@@ -1,0 +1,246 @@
+.hero-container {
+    background-color: rgb(249, 202, 13); 
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    background-image: linear-gradient(rgba(249, 202, 13,0.2), rgba(249, 202, 13,0.9)), url('../media/spanish-flag-paint.webp');
+    background-size: cover;
+}
+
+.hero-inner {
+    padding-top: 4em;
+    padding-bottom: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-right: 2em;
+    padding-left: 2em;
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+}
+
+#hero-info {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+}
+
+#spanish {
+    background: linear-gradient(to bottom, #ff0000 0%, #ff0000 30%, #FFD500 30%, #ffd500 70%, #ff0000 70%, #ff0000 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0px 0px 3px #000);
+    transition: 0.2s;
+}
+
+#spanish:hover {
+    transform: translateY(-5px);
+}
+
+@media (max-width: 1120px) {
+    #hero-info {
+        width: 48%;
+    }
+}
+
+@media (max-width: 479px) {
+    #hero-info {
+        width:100%
+    }
+}
+
+@media (max-width: 1120px) {
+    #hero-info > h1 {
+        font-size: 3em;
+    }
+
+    #hero-info > h2 {
+        font-size: 1.12em;
+        line-height: 1.2;
+    }
+}
+
+@media (max-width: 479px) {
+
+    #hero-info > h1 {
+        font-size: 2em !important;
+        text-align: center;
+    }
+
+    #hero-info > h2 {
+        text-align: center;
+    }
+}
+
+#hero-info > h1 {
+    color:#000;
+    font-family: Poppins;
+    font-size: 3.2rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+#hero-info > h1 span {
+    color: #ffffff;
+    white-space: break-spaces;
+    display: inline-block;
+    text-decoration: inherit;
+}
+
+#hero-info > h2 {
+    font-family: Poppins;
+    font-weight: 800;
+    font-size: 1.2em;
+    line-height: 1.2;
+    color: #000000;
+}
+
+@media (max-width: 1120px) {
+    #hero-img-small {
+        display: none;
+    }
+
+    #hero-img-small {
+        width: 50%;
+    }
+}
+
+@media (max-width: 991px) {
+    #hero-img-small {
+        display: none;
+    }
+}
+
+
+@media (max-width: 479px) {
+    #hero-img-small {
+        position: static !important;
+        width: 100% !important;
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-bottom: 0px;
+        margin-right: 0px;
+        padding-top: 0px;
+        padding-left: 0px;
+        padding-bottom: 0px;
+        padding-right: 0px;
+        display: block !important;
+        height: auto !important;
+    }
+
+    #hero-img {
+        position: static !important;
+        width: 100% !important;
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-bottom: 0px;
+        margin-right: 0px;
+        display: none !important;
+        height: auto !important;
+    }
+}
+
+#hero-img-small {
+    position: absolute;
+    right: -4%;
+    height: 98%;
+    object-fit: contain;
+    bottom: 50%;
+    width: 52%;
+    display: none;
+    max-width: 100%;
+}
+
+#hero-img {
+    position: static;
+    right: -4%;
+    height: 98%;
+    object-fit: contain;
+    bottom: 50%;
+    width: 53%;
+    display: block;
+    max-width: 100%;
+    border-style: none;
+    transition: transform 0.2s ease-in-out; /* Add transition for transform */
+}
+
+#hero-img:hover {
+    cursor: pointer;
+    transform: scale(1.05) rotate(1deg); /* Slightly grow the image on hover */
+}
+
+#hero-button-container {
+    margin-top: 1em;
+    width: 100%;
+    object-fit: contain;
+    height: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+@media (max-width: 479px) {
+    #hero-button-container  {
+        margin-top: 0px;
+        gap: 0.5em;
+    }
+
+    #hero-button-container h2 {
+        font-size: 1.1em !important;
+        font-weight: 600 !important;
+    }
+}
+
+#hero-button-container h2 {
+    font-family: Poppins;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #554400;
+    width: 100%;
+    object-fit: contain;
+    height: auto;
+    text-align: center;
+    margin: 0;
+}
+
+#hero-button-container a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    object-fit: contain;
+    height: auto;
+    background-color: #000000;
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+    gap: 0.5em;
+    border-radius: 0.5em;
+    color: #ffffff;
+    flex-wrap: wrap;
+    text-align: center;
+    text-decoration: none;
+    justify-content: center;
+}
+
+#hero-button-container a h3 {
+    font-family: Poppins;
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #ffffff;
+    margin: 0;
+}
+
+@media (max-width: 1120px) {
+    #hero-button-container a h3 {
+        font-size: 1.3em;
+    }
+}
