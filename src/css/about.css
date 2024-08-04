@@ -3,7 +3,6 @@
     background-size: cover;
     background-repeat: repeat;
     display: block;
-    box-sizing: inherit;
 }
 
 .about-me-inner {
@@ -21,7 +20,6 @@
     margin-left: auto;
     margin-right: auto;
     height: 100%;
-    box-sizing: inherit;
 }
 
 .about-me-inner > h1:nth-child(1) {
@@ -41,7 +39,6 @@
 
 .about-me-inner > h1:nth-child(2) {
     color: #f9ca0d;
-    margin-top: -0.5em;
     text-align: center;
     width: 100%;
     object-fit: contain;
@@ -51,7 +48,6 @@
     font-size: 1.2em;
     line-height: 1.2;
     margin: 0;
-    box-sizing: inherit;
 }
 
 .about-me-content {
@@ -85,10 +81,6 @@
 }
 
 @media (max-width: 479px) {
-    .about-me-inner {
-        display: flex;
-    }
-
     .about-me-content {
         flex-direction: column;
         align-items: center;
