@@ -17,6 +17,27 @@ import './css/main.css';
 
 const App = () => {
     return (
+
+        <>
+
+        <form name="contact" method="POST" data-netlify="true" onSubmit="submit">
+            <input type="hidden" name="form-name" value="contact" />
+            <label>
+                First Name:
+                <input type="text" name="first-name" />
+            </label>
+            <label htmlFor="email">
+                Your Email: 
+                <input id="email" type="email" name="email" />
+            </label>
+            <label>
+                Message: 
+                <textarea name="message" />
+            </label>
+
+            <button type="submit">Send</button>
+        </form>
+
         <Router>
             <Navbar />
             <Routes>
@@ -26,6 +47,8 @@ const App = () => {
             </Routes>
             <ScrollToTop />
         </Router>
+
+        </>
     )
 }
 
