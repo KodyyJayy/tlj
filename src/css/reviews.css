@@ -1,11 +1,50 @@
-.embla {
-    overflow: hidden;
-    user-select: none;
-  }
-  .embla__container {
+.reviews {
+    width: 100%;
+    display: block;
+}
+
+.reviews-inner {
+    gap: 0.5em !important;
     display: flex;
-  }
-  .embla__slide {
-    flex: 0 0 100%;
-    min-width: 0;
-  }
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    padding-right: 2em;
+    padding-left: 2em;
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+}
+
+.reviews-inner > h1:nth-child(1) {
+    font-family: Poppins, sans-serif;
+    font-weight: 800;
+    font-size: 3rem;
+    line-height: 1;
+    text-align: center;
+    width: 100%;
+    object-fit: contain;
+    height: auto;
+    color: #000;
+    white-space: break-spaces;
+    margin: 0;
+    unicode-bidi: isolate;
+}
+
+.reviews-inner > h1:nth-child(2) {
+    color: #f9ca0d;
+    text-align: center;
+    width: 100%;
+    object-fit: contain;
+    height: auto;
+    font-family: Poppins, sans-serif;
+    font-weight: 800;
+    font-size: 1.2em;
+    line-height: 1.2;
+    margin: 0;
+    padding-bottom: 1rem;
+}
