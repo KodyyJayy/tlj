@@ -3,6 +3,14 @@ import HeroImage from '../media/hero-image-2.webp';
 import Arrow from '../media/arrow.svg'
 import Spiral from '../media/spiral.svg'
 
+const calculateYears = (year) => {
+    const startDate = new Date(`${year}-01-01`);
+    const currentDate = new Date();
+    const diffTime = Math.abs(currentDate - startDate);
+    const diffYears = diffTime / (1000 * 60 * 60 * 24 * 365.25);
+    return Math.floor(diffYears);
+}
+
 const About = () => {
     return (
         <div className="about-me" id="about">
@@ -10,7 +18,7 @@ const About = () => {
             <img className="icon spiral" alt="" src={Spiral} draggable="false" />
             <div className="about-me-inner">
                 <h1>MEET ADELE:</h1>
-                <h1>Qualified Spanish tutor of 9 years!</h1>
+                <h1>Qualified Spanish tutor of {calculateYears(2015)} years!</h1>
                 <div className="about-me-content">
                     <img alt="" src={HeroImage} draggable="false" />
                     <h1>

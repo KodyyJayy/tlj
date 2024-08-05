@@ -1,0 +1,99 @@
+.content-wrap {
+    flex: 1;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px 80px;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.about .logo-text {
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.about p {
+    color: #bbb;
+    margin: 20px 0;
+}
+
+.contact span {
+    display: block;
+    color: #bbb;
+    margin: 10px 0;
+}
+
+.socials a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.socials a:hover {
+    color: #3498db;
+}
+
+.links ul {
+    list-style: none;
+}
+
+.links ul a {
+    display: block;
+    color: #fff;
+    margin: 10px 0;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.links ul a:hover {
+    color: #3498db;
+}
+
+.contact-form .contact-input {
+    background: #444;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    margin-bottom: 10px;
+    width: calc(100% - 22px);
+}
+
+.contact-form .btn {
+    display: inline-block;
+    background: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form .btn:hover {
+    background: #2980b9;
+}
+
+.footer-bottom {
+    background: #222;
+    color: #bbb;
+    height: 50px;
+    text-align: center;
+    padding: 20px 0;
+    margin: 0;
+}
