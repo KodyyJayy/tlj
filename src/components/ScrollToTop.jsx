@@ -31,8 +31,8 @@ const ScrollToTop = () => {
   return (
     <>
     
-    <div className={`scroll-to-top ${isVisible ? ("active") : ""}`}>
-        <div onClick={scrollToTop}>
+    <div className={`scroll-to-top ${isVisible ? ("active") : ""}`} onClick={scrollToTop}>
+        <div>
           <h3><FontAwesomeIcon icon={faArrowUp} /></h3>
         </div>
     </div>
