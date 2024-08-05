@@ -1,26 +1,65 @@
-import '../css/contact.css'
+import React, { useState } from 'react';
+import '../css/contact.css';
 
 const Contact = () => {
+    const [messageLength, setMessageLength] = useState(0);
+    const [firstName, setFirstName] = useState('');
+    const [isEmailValid, setIsEmailValid] = useState(false);
+
+    const handleMessageChange = (event) => {
+        setMessageLength(event.target.value.length);
+    };
+
+    const handleFirstNameChange = (event) => {
+        setFirstName(event.target.value);
+    };
+
+    const handleEmailChange = (event) => {
+        const emailValue = event.target.value;
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        setIsEmailValid(emailPattern.test(emailValue));
+    };
+
+    const isFormValid = () => {
+        return messageLength >= 40 && firstName.trim() !== '' && isEmailValid;
+    };
+
     return (
         <div className="contact-form">
             <div className="contact-form-inner">
                 <h1>GET IN TOUCH:</h1>
                 <h1>Got a question? Email us through our contact form!</h1>
-                <iframe title="Contact Form" src="https://plugins.crisp.chat/urn:crisp.im:contact-form:0/contact/f6afb8ca-9c70-47a7-b15e-13f5174626b6" referrerPolicy="origin" sandbox="allow-forms allow-popups allow-scripts allow-same-origin" height="620px" width="100%" frameBorder={0}></iframe>
+                
+                <div className="form-wrapper">
+                    <form name="contact" method="POST">
+                        <div className="form-field">
+                            <input type="hidden" name="form-name" value="contact" />
+                        </div>
+                        
+                        <div className="form-field">
+                            <input type="text" name="first-name" placeholder="Enter your first name..." required onChange={handleFirstNameChange} />
+                            <label htmlFor="first-name">First Name</label>
+                        </div>
+
+                        <div className="form-field">
+                            <input id="email" type="email" name="email" placeholder="Enter your email address..." required onChange={handleEmailChange} pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" />
+                            <label htmlFor="email">Email Address</label>
+                        </div>
+
+                        <div className="form-field form-field--spaced">
+                            <textarea name="message" placeholder="Enter your message..." minLength={40} maxLength={2000} required onChange={handleMessageChange} />
+                            <label htmlFor="message">Message</label>
+                            <legend>
+                                <span id="message_characters">{messageLength}</span> / 40 characters minimum
+                            </legend>
+                        </div>
+
+                        <button className="send-message" type="submit" disabled={!isFormValid()}>Send Message</button>
+                    </form>
+                </div>
             </div>
-
-            <form name="contact" method="POST">
-                <input type="hidden" name="form-name" value="contact" />
-                <input type="text" name="first-name" placeholder="Your name"/>
-                <input id="email" type="email" name="email" placeholder="Your email"/>
-                <textarea name="message" placeholder="Message" />
-                <button type="submit">Send</button>
-            </form>
         </div>
+    );
+};
 
-        
-        
-    )
-}
-
-export default Contact 
+export default Contact;
