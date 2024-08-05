@@ -21,7 +21,7 @@
     font-family: Poppins, sans-serif;
     background-color: #f8f8f8;
     box-shadow: inset 0 0 0 0.2rem rgb(234, 234, 234);
-    border-radius: 1.8rem;
+    border-radius: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -84,13 +84,17 @@
   @media (max-width: 479px) {
     .embla {
         max-width: 90%;
-      --slide-height: 15rem; /* Adjust slide height for mobile */
+      --slide-height: 10rem; /* Adjust slide height for mobile */
     }
     .embla__slide__number {
-      padding-left: 15px; /* Reduce padding for mobile */
-      padding-right: 15px;
-      padding-bottom: 20px;
-      padding-top: 20px;
-      font-size: 0.5rem; /* Adjust font size for mobile */
+        justify-content: start;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        font-size: 0.75rem;
+        overflow: scroll;
+        text-align: center;
+        box-sizing: border-box;
+        border-radius: 0.5rem;
+        font-weight: 500;
     }
   }  
