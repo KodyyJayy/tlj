@@ -33,21 +33,21 @@ const Contact = () => {
                 <div className="form-wrapper">
                     <form name="contact" method="POST">
                         <div className="form-field">
-                            <input type="hidden" name="form-name" value="contact" />
+                            <input type="hidden" name="form-name" value="contact" autoComplete="off"/>
                         </div>
                         
                         <div className="form-field">
-                            <input type="text" name="first-name" placeholder="Enter your first name..." required onChange={handleFirstNameChange} />
+                            <input type="text" id="first-name" name="first-name" autoComplete="off" placeholder="Enter your first name..." required onChange={handleFirstNameChange} />
                             <label htmlFor="first-name">First Name</label>
                         </div>
 
                         <div className="form-field">
-                            <input id="email" type="email" name="email" placeholder="Enter your email address..." required onChange={handleEmailChange} pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" />
+                            <input id="email" type="email" name="email" autoComplete="off" placeholder="Enter your email address..." required onChange={handleEmailChange} pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" />
                             <label htmlFor="email">Email Address</label>
                         </div>
 
                         <div className="form-field form-field--spaced">
-                            <textarea name="message" placeholder="Enter your message..." minLength={40} maxLength={2000} required onChange={handleMessageChange} />
+                            <textarea id="message" name="message" autoComplete="off" placeholder="Enter your message..." minLength={40} maxLength={2000} required onChange={handleMessageChange} />
                             <label htmlFor="message">Message</label>
                             <legend>
                                 <span id="message_characters">{messageLength}</span> / 40 characters minimum
