@@ -74,7 +74,7 @@
 }
 
 .seen-on-inner > img:hover {
-    transform: translateY(-5px);
+    transform: scale(1.075);
 }
 
 @media (max-width: 479px) {

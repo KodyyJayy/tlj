@@ -9,7 +9,8 @@
     font-family: Poppins, sans-serif;
     font-weight: 600;
     padding-top: 10px;
-    padding-bottom: 10px
+    padding-bottom: 10px;
+    user-select: none;
 }
 
 .content {

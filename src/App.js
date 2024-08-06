@@ -11,7 +11,7 @@ import Home from './components/Home';
 import PageNotFound from './components/PageNotFound';
 import Navbar from './components/Navbar';
 import ScrollToTop from './components/ScrollToTop';
-/*import Footer from './components/Footer';*/
+import Footer from './components/Footer';
 
 import './css/main.css';
 
@@ -26,6 +26,7 @@ const App = () => {
                 <Route path="*" element={<PageNotFound />} />
             </Routes>
             <ScrollToTop />
+            <Footer />
         </Router>
     )
 }

@@ -85,6 +85,13 @@
     font-size: 3.2rem;
     font-weight: 800;
     line-height: 1;
+    transition: 0.2s;
+    user-select: none;
+}
+
+#hero-info > h1:hover {
+    transform: scale(1.05);
+    cursor: default;
 }
 
 #hero-info > h1 span {
@@ -100,6 +107,13 @@
     font-size: 1.2em;
     line-height: 1.2;
     color: #000000;
+    transition: 0.2s;
+    user-select: none;
+}
+
+#hero-info > h2:hover {
+    transform: scale(1.05);
+    cursor: default;
 }
 
 @media (max-width: 1120px) {

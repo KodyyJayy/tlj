@@ -24,6 +24,21 @@ const Contact = () => {
         return messageLength >= 40 && firstName.trim() !== '' && isEmailValid;
     };
 
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        const form = event.target;
+        const formData = new FormData(form);
+
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData).toString(),
+        })
+            .then(() => alert("Thank you for your submission"))
+            .catch((error) => alert(error));
+    };
+
     return (
         <div className="contact-form">
             <div className="contact-form-inner">
@@ -31,7 +46,7 @@ const Contact = () => {
                 <h1>Got a question? Email us through our contact form!</h1>
                 
                 <div className="form-wrapper">
-                    <form name="contact" method="POST">
+                    <form name="contact" method="POST" onSubmit={handleSubmit}>
                         <div className="form-field">
                             <input type="hidden" name="form-name" value="contact" autoComplete="off"/>
                         </div>

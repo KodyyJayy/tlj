@@ -55,7 +55,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 1em;
+    gap: 2em;
     width: 100%;
 }
 
@@ -78,6 +78,13 @@
     letter-spacing: -0.2px;
     font-size: 1.2rem;
     flex: 1;
+    transition: 0.2s;
+    user-select: none;
+}
+
+.about-me-content h1:hover {
+    transform: scale(1.05);
+    cursor: default;
 }
 
 @media (max-width: 479px) {
