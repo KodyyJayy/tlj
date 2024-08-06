@@ -185,3 +185,9 @@ form legend {
     margin-top: 7px;
     margin-left: 13px;
 }
+
+.send-message--success {
+    background-color: green !important;
+    color: white;
+    opacity: 1 !important;
+}

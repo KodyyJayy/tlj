@@ -5,6 +5,8 @@ const Contact = () => {
     const [messageLength, setMessageLength] = useState(0);
     const [firstName, setFirstName] = useState('');
     const [isEmailValid, setIsEmailValid] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitSuccess, setSubmitSuccess] = useState(false);
 
     const handleMessageChange = (event) => {
         setMessageLength(event.target.value.length);
@@ -24,19 +26,37 @@ const Contact = () => {
         return messageLength >= 40 && firstName.trim() !== '' && isEmailValid;
     };
 
+    const resetForm = (form) => {
+        setMessageLength(0);
+        setFirstName('');
+        setIsEmailValid(false);
+        form.reset();
+    };
+
     const handleSubmit = (event) => {
         event.preventDefault();
 
         const form = event.target;
         const formData = new FormData(form);
 
+        setIsSubmitting(true);
+
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: new URLSearchParams(formData).toString(),
         })
-            .then(() => alert("Thank you for your submission"))
-            .catch((error) => alert(error));
+            .then(() => {
+                resetForm(form);
+                setSubmitSuccess(true);
+                setTimeout(() => {
+                    setSubmitSuccess(false);
+                }, 3000);
+            })
+            .catch((error) => alert(error))
+            .finally(() => {
+                setIsSubmitting(false);
+            });
     };
 
     return (
@@ -52,7 +72,7 @@ const Contact = () => {
                         </div>
                         
                         <div className="form-field">
-                            <input type="text" id="first-name" name="first-name" autoComplete="off" placeholder="Enter your first name..." required onChange={handleFirstNameChange} />
+                            <input type="text" id="first-name" name="first-name" autoComplete="off" placeholder="Enter your first name..." required onChange={handleFirstNameChange} value={firstName} />
                             <label htmlFor="first-name">First Name</label>
                         </div>
 
@@ -69,7 +89,13 @@ const Contact = () => {
                             </legend>
                         </div>
 
-                        <button className="send-message" type="submit" disabled={!isFormValid()}>Send Message</button>
+                        <button
+                            className={`send-message ${submitSuccess ? 'send-message--success' : ''}`}
+                            type="submit"
+                            disabled={isSubmitting || !isFormValid()}
+                        >
+                            {submitSuccess ? 'Success!' : isSubmitting ? 'Submitting...' : 'Send Message'}
+                        </button>
                     </form>
                 </div>
             </div>
