@@ -10,7 +10,7 @@ import Contact from './Contact';
 const Home = () => {
     return (
         <>
-            <Fade bottom distance="5%" duration="1000">
+            <Fade bottom distance="25%" duration="1000">
                 <Hero />
                 <AsSeenOn />
                 <About />
