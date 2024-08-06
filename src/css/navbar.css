@@ -18,6 +18,11 @@
 .navbar-logo img {
     height: 100px;
     max-width: 100px;
+    transition: 0.2s;
+}
+
+.navbar-logo img:hover {
+    transform: scale(1.05);
 }
 
 .navbar .title {

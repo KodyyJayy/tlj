@@ -65,7 +65,7 @@ const Navbar = () => {
                     Contact
                 </NavLink>
                 <a 
-                    href="https://www.teachable.com" rel="noreferrer" target='_blank'
+                    href="https://www.teachable.com" rel="noreferrer"
                 >
                     Course Login
                 </a>
