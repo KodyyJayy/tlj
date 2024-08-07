@@ -4,7 +4,7 @@ import HeroImage from '../media/hero-image-2.webp'
 
 const Hero = () => {
     return (
-        <div className="hero-container">
+        <div className="hero-container" id="hero">
             <div className="hero-inner">
                 <div id="hero-info">
                     <h1>

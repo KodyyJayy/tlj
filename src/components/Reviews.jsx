@@ -25,7 +25,7 @@ const OPTIONS = { loop: false }
 const Reviews = () => {
 
     return (
-        <div className="reviews">
+        <div className="reviews" id="testimonials">
             <div className="reviews-inner">
                 <h1>WHY CHOOSE ME?</h1>
                 <h1>Here's what a few of my students have to say!</h1>

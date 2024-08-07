@@ -6,6 +6,7 @@
     display: block;
     background-image: linear-gradient(rgba(249, 202, 13,0.2), rgba(249, 202, 13,0.9)), url('../media/spanish-flag-paint.webp');
     background-size: cover;
+    padding-top: 120px;
 }
 
 .hero-inner {
@@ -132,6 +133,11 @@
     }
 }
 
+@media (max-width: 896px) {
+    .hero-container {
+        padding-top: 60px;
+    }
+}
 
 @media (max-width: 479px) {
     #hero-img-small {

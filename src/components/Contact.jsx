@@ -60,7 +60,7 @@ const Contact = () => {
     };
 
     return (
-        <div className="contact-form">
+        <div className="contact-form" id="contact">
             <div className="contact-form-inner">
                 <h1>GET IN TOUCH:</h1>
                 <h1>Got a question? Email us through our contact form!</h1>

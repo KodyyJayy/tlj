@@ -1,3 +1,4 @@
+import { Link } from 'react-scroll';
 import '../css/footer.css'
 
 import Logo from '../media/logo.webp'
@@ -7,7 +8,14 @@ const Footer = () => {
         <footer className="footer">
             <p>Designed by Kody</p>
             <div className="footer-inner">
-                <a href="/home"><img alt="" src={Logo} draggable="false" /></a>
+                <Link  to="hero" 
+                    spy = {true}
+                    smooth = {true}
+                    offset={-120}
+                    duration={1000}
+                >
+                    <img alt="" src={Logo} draggable="false" />
+                </Link>
                 <p>© 2024 The Language Jeanie</p>
             </div>
         </footer>

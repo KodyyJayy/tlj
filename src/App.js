@@ -4,7 +4,6 @@ import {
   Routes,
   Route
 } from 'react-router-dom';
-import { Fade } from 'react-reveal';
 
 import Home from './components/Home';
 import PageNotFound from './components/PageNotFound';
@@ -25,9 +24,7 @@ const App = () => {
                 <Route path="*" element={<PageNotFound />} />
             </Routes>
             <ScrollToTop />
-            <Fade bottom distance="5%" duration="1000">
-                <Footer />
-            </Fade>
+            <Footer />
         </Router>
     )
 }
