@@ -5,7 +5,7 @@ import TiktokLarge from '../media/tiktok-large.webp';
 import InstagramLarge from '../media/instagram-large.webp';
 import FacebookLarge from '../media/facebook-large.webp';
 
-import { socials } from '../socials';
+import { socials } from '../utils/socials';
 
 const AsSeenOn = () => {
     return (

@@ -1,31 +1,21 @@
 footer {
-    background-color: #d3d3d3;
+    background-color: #d3d3d3; /* Retain original background color */
     width: 100%;
     display: block;
     position: relative;
 }
 
 footer p {
-    font-family: Poppins;
+    font-family: Poppins; /* Retain original font-family */
     font-size: 0.8em;
     font-weight: 400;
     user-select: none;
 }
 
-footer > p {
-    position: absolute;
-    text-align: center;
-    margin: 0;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 .footer-inner {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
+    justify-content: space-between; /* Arrange items in a row */
     padding-top: 1em;
     padding-bottom: 1em;
     padding-right: 7.5em;
@@ -35,7 +25,7 @@ footer > p {
     height: 100%;
 }
 
-.footer-inner a img {
+.footer-inner img {
     max-width: 120px;
     object-fit: contain;
     height: auto;
@@ -44,34 +34,49 @@ footer > p {
     transition: 0.2s;
 }
 
-.footer-inner a img:hover {
+.footer-inner img:hover {
     transform: scale(1.05);
 }
 
-.footer-inner p:nth-child(1) {
-    display: inline-block;
+.social-icons {
+    display: flex;
+    justify-content: center; /* Center icons horizontally */
+    gap: 1em;
+}
+
+.social-icons a {
+    color: #333;
+    font-size: 1.5em; /* Slightly increase the icon size */
+    transition: color 0.2s, transform 0.2s;
+}
+
+.social-icons a:hover {
+    color: #0077b5; /* You can adjust the hover color */
+    transform: scale(1.1);
+}
+
+.footer-inner p {
+    margin: 0;
 }
 
 @media (max-width: 479px) {
     .footer-inner {
-        flex-direction: column;
-        padding-top: 1em;
-        padding-bottom: 1em;
+        flex-direction: column; /* Stack items vertically on small screens */
         padding-right: 1em;
         padding-left: 1em;
+        text-align: center; /* Center text and icons on small screens */
     }
 
-    .footer-inner a img {
+    .footer-inner img {
         max-width: 80px;
     }
 
-    .footer-inner p {
-        margin-top: 1em;
-        text-align: center;
+    .social-icons {
+        margin: 1em 0; /* Add spacing above and below the icons */
     }
 
-    footer > p {
+    footer p {
+        margin-top: 1em; /* Add margin-top to separate the text from the icons */
         font-size: 0.7em;
-        top: 90%; /* Adjust position for better centering on smaller screens */
     }
 }
